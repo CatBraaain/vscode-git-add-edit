@@ -1,0 +1,26 @@
+{
+    "compilerOptions": {
+        "module": "commonjs", // for vscode
+        "target": "ESNext",
+        "lib": [
+            "ESNext"
+        ],
+        "rootDir": "./src",
+        "outDir": "./dist",
+        "allowJs": true,
+        "esModuleInterop": true, // ensures compatibility between ES6 and CommonJS modules.
+        "forceConsistentCasingInFileNames": true, // enforces consistent letter casing in file names
+        "moduleDetection": "force", // forces files to be detected as modules
+        "noImplicitAny": false, // temporary solution to allow implicit 'any' type
+        "noImplicitReturns": true, // ensures that all code paths in a function return a value
+        "skipLibCheck": true, // skips type checking of files in libraries to reduce compilation time
+        "sourceMap": true, // generates corresponding '.map' files for debugging
+        "strict": true // enables all strict type-checking options
+    },
+    "include": [
+        "src/**/*"
+    ],
+    "exclude": [
+        "node_modules"
+    ]
+}

@@ -1,0 +1,56 @@
+{
+    "name": "git-add-edit",
+    "displayName": "git add edit",
+    "description": "`git add -e` with context menu",
+    "version": "0.0.1",
+    "engines": {
+        "vscode": "^1.93.0"
+    },
+    "activationEvents": [],
+    "main": "./dist/extension.js",
+    "contributes": {
+        "commands": [
+            {
+                "command": "git-add-edit.gitAddEditFromExplorer",
+                "title": "git add -e"
+            },
+            {
+                "command": "git-add-edit.gitAddEditFromScm",
+                "title": "git add -e"
+            }
+        ],
+        "menus": {
+            "explorer/context": [
+                {
+                    "command": "git-add-edit.gitAddEditFromExplorer"
+                }
+            ],
+            "scm/resourceState/context": [
+                {
+                    "command": "git-add-edit.gitAddEditFromScm"
+                }
+            ],
+            "commandPalette": [
+                {
+                    "command": "git-add-edit.gitAddEditFromExplorer",
+                    "when": "false"
+                },
+                {
+                    "command": "git-add-edit.gitAddEditFromScm",
+                    "when": "false"
+                }
+            ]
+        }
+    },
+    "scripts": {
+        "watch": "tsc -w"
+    },
+    "devDependencies": {
+        "@types/node": "^22.5.5",
+        "@types/vscode": "^1.93.0",
+        "@typescript-eslint/eslint-plugin": "^8.6.0",
+        "@typescript-eslint/parser": "^8.6.0",
+        "eslint": "^9.10.0",
+        "typescript": "^5.6.2"
+    }
+}
