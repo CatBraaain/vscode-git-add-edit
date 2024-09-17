@@ -1,13 +1,15 @@
 {
     "name": "git-add-edit",
+    "version": "0.0.1",
     "displayName": "git add edit",
     "description": "`git add -e` with context menu",
-    "version": "0.0.1",
+    "publisher": "CatBraaain",
     "engines": {
         "vscode": "^1.93.0"
     },
-    "activationEvents": [],
+    "lisence": "MIT",
     "main": "./dist/extension.js",
+    "activationEvents": [],
     "contributes": {
         "commands": [
             {
@@ -44,6 +46,10 @@
     },
     "scripts": {
         "watch": "tsc -w"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/CatBraaain/vscode-git-add-edit.git"
     },
     "devDependencies": {
         "@types/node": "^22.5.5",
