@@ -1,7 +1,7 @@
 {
   "name": "git-add-edit",
   "displayName": "git add edit",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "`git add -e` with context menu",
   "repository": {
     "type": "git",
