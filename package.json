@@ -9,7 +9,9 @@
     },
     "lisence": "MIT",
     "main": "./dist/extension.js",
-    "activationEvents": [],
+    "activationEvents": [
+        "*"
+    ],
     "contributes": {
         "commands": [
             {
@@ -30,16 +32,6 @@
             "scm/resourceState/context": [
                 {
                     "command": "git-add-edit.gitAddEditFromScm"
-                }
-            ],
-            "commandPalette": [
-                {
-                    "command": "git-add-edit.gitAddEditFromExplorer",
-                    "when": "false"
-                },
-                {
-                    "command": "git-add-edit.gitAddEditFromScm",
-                    "when": "false"
                 }
             ]
         }
