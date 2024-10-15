@@ -1,54 +1,54 @@
 {
-    "name": "git-add-edit",
-    "version": "0.0.1",
-    "displayName": "git add edit",
-    "description": "`git add -e` with context menu",
-    "publisher": "CatBraaain",
-    "engines": {
-        "vscode": "^1.93.0"
-    },
-    "lisence": "MIT",
-    "main": "./dist/extension.js",
-    "activationEvents": [
-        "*"
+  "name": "git-add-edit",
+  "displayName": "git add edit",
+  "version": "0.0.1",
+  "description": "`git add -e` with context menu",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/CatBraaain/vscode-git-add-edit.git"
+  },
+  "publisher": "CatBraaain",
+  "main": "./dist/extension.js",
+  "scripts": {
+    "watch": "tsc -w"
+  },
+  "contributes": {
+    "commands": [
+      {
+        "command": "git-add-edit.gitAddEditFromExplorer",
+        "title": "git add -e"
+      },
+      {
+        "command": "git-add-edit.gitAddEditFromScm",
+        "title": "git add -e"
+      }
     ],
-    "contributes": {
-        "commands": [
-            {
-                "command": "git-add-edit.gitAddEditFromExplorer",
-                "title": "git add -e"
-            },
-            {
-                "command": "git-add-edit.gitAddEditFromScm",
-                "title": "git add -e"
-            }
-        ],
-        "menus": {
-            "explorer/context": [
-                {
-                    "command": "git-add-edit.gitAddEditFromExplorer"
-                }
-            ],
-            "scm/resourceState/context": [
-                {
-                    "command": "git-add-edit.gitAddEditFromScm"
-                }
-            ]
+    "menus": {
+      "explorer/context": [
+        {
+          "command": "git-add-edit.gitAddEditFromExplorer"
         }
-    },
-    "scripts": {
-        "watch": "tsc -w"
-    },
-    "repository": {
-        "type": "git",
-        "url": "https://github.com/CatBraaain/vscode-git-add-edit.git"
-    },
-    "devDependencies": {
-        "@types/node": "^22.5.5",
-        "@types/vscode": "^1.93.0",
-        "@typescript-eslint/eslint-plugin": "^8.6.0",
-        "@typescript-eslint/parser": "^8.6.0",
-        "eslint": "^9.10.0",
-        "typescript": "^5.6.2"
+      ],
+      "scm/resourceState/context": [
+        {
+          "command": "git-add-edit.gitAddEditFromScm"
+        }
+      ]
     }
+  },
+  "activationEvents": [
+    "*"
+  ],
+  "devDependencies": {
+    "@types/node": "^22.5.5",
+    "@types/vscode": "^1.93.0",
+    "@typescript-eslint/eslint-plugin": "^8.6.0",
+    "@typescript-eslint/parser": "^8.6.0",
+    "eslint": "^9.10.0",
+    "typescript": "^5.6.2"
+  },
+  "engines": {
+    "vscode": "^1.93.0"
+  },
+  "lisence": "MIT"
 }
