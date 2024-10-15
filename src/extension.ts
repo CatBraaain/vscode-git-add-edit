@@ -6,15 +6,15 @@ export function activate(context: vscode.ExtensionContext): void {
       "git-add-edit.gitAddEditFromExplorer",
       (uri: vscode.Uri | undefined, uris: vscode.Uri[] | undefined) => {
         gitAddEdit(uris);
-      }
+      },
     ),
     vscode.commands.registerCommand(
       "git-add-edit.gitAddEditFromScm",
       (...resources: vscode.SourceControlResourceState[]) => {
         const uris = resources.map(resource => resource.resourceUri);
         gitAddEdit(uris);
-      }
-    )
+      },
+    ),
   );
 }
 
